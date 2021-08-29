@@ -1,12 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Markdown Blog</title>
-</head>
-<body>
-    <%= text %> 
-</body>
-</html>
+<div class="mainpagewrapper">
+    <h1>Blog Articles</h1>
+    <a href="/articles/new">New Article</a>
+    <% articles.forEach(article => { %> 
+        <div class="blogcardwrapper">
+            <div class="blogcard">
+                <h4 class="blogcard--title"> <%= article.title %> </h4>
+                <div class="blogcard--date"> <%= article.date.toLocaleDateString() %> </div>
+                <div class="blogcard--description"><%= article.description %></div>
+            </div>
+        </div>
+    <% }) %> 
+</div>

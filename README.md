@@ -2,11 +2,12 @@
 
 ## 모듈 설치
 
-pip install -r requirements.txt
+npm install
 
 ## 실행
 
 npm run devstart
+sass --watch public/scss:public/css
 
 ## Project Status
 
@@ -21,6 +22,7 @@ npm run devstart
 <img src="https://img.shields.io/badge/NodeJS-339933?style=flat-square&logo=Node.js&logoColor=white"/></a>&nbsp;
 <img src="https://img.shields.io/badge/Express-FF7200?style=flat-square&logo=Express&logoColor=white"/></a>&nbsp;
 <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=MongoDB&logoColor=white"/></a>&nbsp;
+<img src="https://img.shields.io/badge/Sass-CC6699?style=flat-square&logo=Sass&logoColor=white"/></a>&nbsp;
 
 ## Outline
 
