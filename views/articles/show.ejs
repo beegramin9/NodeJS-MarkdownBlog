@@ -1,0 +1,10 @@
+<div>
+    <h1> <%= article.title %> </h1>
+    <div> <%= article.date.toLocaleDateString() %> </div>
+    <a href="/">All atricles</a>
+    <a href="/articles/edit/ <%= article.id %> ">Edit</a>
+
+    <div>
+        <%= article.markdown %> 
+    </div>   
+</div>

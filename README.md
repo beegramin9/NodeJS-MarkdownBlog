@@ -1,5 +1,3 @@
-"# NodeJS-MarkdownBlog"
-
 ## 모듈 설치
 
 npm install
@@ -7,7 +5,6 @@ npm install
 ## 실행
 
 npm run devstart
-sass --watch public/scss:public/css
 
 ## Project Status
 
@@ -21,13 +18,17 @@ sass --watch public/scss:public/css
 
 <img src="https://img.shields.io/badge/NodeJS-339933?style=flat-square&logo=Node.js&logoColor=white"/></a>&nbsp;
 <img src="https://img.shields.io/badge/Express-FF7200?style=flat-square&logo=Express&logoColor=white"/></a>&nbsp;
+<img src="https://img.shields.io/badge/EJS-5522FA?style=flat-square&logo=/e/&logoColor=white"/></a>&nbsp;
 <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=MongoDB&logoColor=white"/></a>&nbsp;
 <img src="https://img.shields.io/badge/Sass-CC6699?style=flat-square&logo=Sass&logoColor=white"/></a>&nbsp;
 
 ## Outline
 
-&nbsp; This clone is a mock-up of Window paint brush, made with MDN Canvas API. Main features are drawing, filling, erasing and reseting, all of which are interactive with the colors off of the buttons.
+&nbsp; This web is a simple Markdown blog that fully supports CRUD interactions. This is built with NodeJS Express, MongoDB, EJS and Sass.
 <br/><br/>
-&nbsp; Javascript Canvas로 그림판을 구현했습니다. Canvas의 활용도는 무궁무진합니다. 아이패드와 같은 터치스크린에 터치펜슬로 필기에서 전자서명까지 쓰일 수 있습니다. MDN 공식 문서를 보며 마우스 이벤트와 터치 이벤트에 둘 다 반응하여 마우스로도, 터치로도 그릴 수 있게 구현했습니다.
+&nbsp; CRUD 기능이 완벽하게 구현된 마크다운 블로그입니다. NodeJS Express, MongoDB, EJS and Sass.
 
 ## Main Feature Code
+- 
+> 
+> 

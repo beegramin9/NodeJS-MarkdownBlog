@@ -4,7 +4,9 @@
     <% articles.forEach(article => { %> 
         <div class="blogcardwrapper">
             <div class="blogcard">
-                <h4 class="blogcard--title"> <%= article.title %> </h4>
+                <a href="articles/<%= article.slug %>">
+                    <h4 class="blogcard--title"> <%= article.title %> </h4>
+                </a>
                 <div class="blogcard--date"> <%= article.date.toLocaleDateString() %> </div>
                 <div class="blogcard--description"><%= article.description %></div>
             </div>
