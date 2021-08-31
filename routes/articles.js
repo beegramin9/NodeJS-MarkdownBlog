@@ -16,31 +16,50 @@ router.get('/:slug', async (req,res) => {
     res.render('articles/show', {article: article})
 })
 
-router.post('/', async (req,res) => {
-    //  Save the articles into the database
-    const currentlyWritingArticle = new Article({
-        title: req.body.title,
-        description: req.body.description,
-        markdown: req.body.markdown
-    })
-    
-    try {
-        const newlySavedArticle = await currentlyWritingArticle.save();
-        res.redirect(`/articles/${newlySavedArticle.slug}`)
-    } catch (e) {
-        // required field가 빠져서 에러가 발생했을 때, 
-        console.log(e);
-        res.render('articles/new', {article: currentlyWritingArticle})
-    }
-})
+router.post('/', async (req, res, next) => {
+    req.article = new Article();
+    next()
+}, saveArticleAndRedirectTo("new"))
 
 //! link는 get, Form은 get/post 요청만 지원한다
 // 호서에서는 delete라는 url을 만들어서 로직을 썼지만
-// 
+// npm i method-override 사용
 
-router.delete('/:id', async (req,res) => {
-    await Article.findByIdAndDelete(req.params.id)
+router.delete('/:id', async (req, res) => {
+    await Article.findByIdAndDelete(req.params.id);
     res.redirect('/')
 })
+
+
+router.get('/edit/:id', async (req, res) => {
+    const existingArticle = await Article.findById(req.params.id);
+    res.render('articles/edit', { article: existingArticle})
+})
+
+// PUT request
+router.put('/:id', async (req, res, next) => {
+    req.article = await Article.findById(req.params.id)
+    next()
+}, saveArticleAndRedirectTo("edit"))
+
+
+function saveArticleAndRedirectTo(path) {
+    return async (req, res) => {
+        //  Save the articles into the database
+        const currentlyWritingArticle = req.article
+        currentlyWritingArticle.title = req.body.title
+        currentlyWritingArticle.description = req.body.description
+        currentlyWritingArticle.markdown = req.body.markdown
+
+        try {
+            const newlySavedArticle = await currentlyWritingArticle.save();
+            res.redirect(`/articles/${newlySavedArticle.slug}`)
+        } catch (e) {
+            // required field가 빠져서 에러가 발생했을 때, 
+            console.log(e);
+            res.render(`articles/${path}`, {article: currentlyWritingArticle})
+        }
+    }
+}
 
 module.exports = router

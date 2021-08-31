@@ -9,6 +9,12 @@
                 </a>
                 <div class="blogcard--date"> <%= article.date.toLocaleDateString() %> </div>
                 <div class="blogcard--description"><%= article.description %></div>
+                <a href="/articles/edit/<%= article.id %>">
+                    <button>Edit</button>
+                </a>
+                <form action="/articles/<%= article.id %>?_method=DELETE" method="POST">
+                    <button type="submit">Delete</button>
+                </form>
             </div>
         </div>
     <% }) %> 

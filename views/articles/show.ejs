@@ -2,9 +2,9 @@
     <h1> <%= article.title %> </h1>
     <div> <%= article.date.toLocaleDateString() %> </div>
     <a href="/">All atricles</a>
-    <a href="/articles/edit/ <%= article.id %> ">Edit</a>
+    <a href="/articles/edit/<%= article.id %> ">Edit</a>
 
     <div>
-        <%= article.markdown %> 
+        <%- article.sanitizedHtml %> <!-- = 아니고 -을 사용해야 markdown을 HTML로 바꿀 수 있다. -->
     </div>   
 </div>
