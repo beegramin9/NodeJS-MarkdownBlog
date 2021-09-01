@@ -1,6 +1,9 @@
+<h1 class="page__title"> <%= article.title %> </h1>
+<div class="post__date"> <%= article.date.toLocaleDateString() %> </div>
 <div class="postwrapper">
-    <h1 class="page__title"> <%= article.title %> </h1>
-    <div class="post__date"> <%= article.date.toLocaleDateString() %> </div>
+    <div class="post__description">
+        <%- article.description %> <!-- = 아니고 -을 사용해야 markdown을 HTML로 바꿀 수 있다. -->
+    </div>   
     <div class="post__body">
         <%- article.sanitizedHtml %> <!-- = 아니고 -을 사용해야 markdown을 HTML로 바꿀 수 있다. -->
     </div>   
