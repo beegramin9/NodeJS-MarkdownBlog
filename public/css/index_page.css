@@ -1,8 +1,52 @@
-.mainpagewrapper h1 {
-  color: red;
+.blogcardwrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 3em 0;
 }
-.mainpagewrapper a {
-  color: green;
+
+.blogcard {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.45);
+  border-radius: 5px;
+  padding: 2em 3em;
+  gap: 3em 0;
+}
+
+.blogcard--header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.blogcard--header h3 {
+  color: #1e1e1f;
+  font-size: 2em;
+}
+.blogcard--header span {
+  color: #a1a2a5;
+  font-size: 1.125em;
+}
+
+.blogcard--footer {
+  display: flex;
+  justify-content: space-between;
+}
+.blogcard--footer span {
+  color: #414244;
+  font-size: 1.125em;
+}
+.blogcard--footer .blogcard--buttonwrapper {
+  display: flex;
+  gap: 0 1rem;
+}
+.blogcard--footer .blogcard--buttonwrapper .button__edit {
+  background-color: #87d1d2;
+}
+.blogcard--footer .blogcard--buttonwrapper .button__delete {
+  background-color: #fc9e94;
 }
 
 /*# sourceMappingURL=index_page.css.map */

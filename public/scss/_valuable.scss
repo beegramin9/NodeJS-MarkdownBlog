@@ -1,0 +1,30 @@
+// Break points
+$breakpoint-desktop: 1024px;
+$breakpoint-tablet: 780px;
+$breakpoint-mobile: 420px;
+
+// Box shadows
+$boxshadow-blogcard: 0px 8px 16px rgba(0, 0, 0, 0.45);
+$boxshadow-button: 0 6px 12px -3px rgba(0, 0, 0, 0.3),
+  0 3px 8px -3px rgba(0, 0, 0, 0.4), 0 -3px 8px -3px rgba(0, 0, 0, 0.3);
+
+// Colors
+$color-main1: hsl(207, 70%, 59%);
+$color-main2: hsl(207, 70%, 94%);
+$color-dark1: hsl(227, 2%, 12%);
+$color-dark2: hsl(227, 2%, 26%);
+$color-dark3: hsl(227, 2%, 64%);
+$color-light1: hsl(0, 0%, 97%);
+$color-light2: hsl(0, 0%, 99%);
+$color-red: rgb(252, 158, 148);
+$color-redbrown: rgb(86, 34, 32);
+$color-orangeyellow: #be5c30;
+$color-yellow: rgb(243, 210, 179);
+$color-emeraldgreen: rgb(135, 209, 210);
+$color-darkgreen: rgb(72, 98, 74);
+$color-skyblue: #9cc9e3;
+$color-blue: hsl(205.1, 100%, 36.1%);
+$color-violet: #a81d99;
+$color-buttonpurple: rgb(122, 109, 211);
+$color-darkpurple: hsl(232.7, 27.3%, 23.7%);
+$color-gray: rgba(199, 198, 193, 0.3);

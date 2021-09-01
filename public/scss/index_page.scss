@@ -1,15 +1,63 @@
-.mainpagewrapper {
-  h1 {
-    color: red;
-  }
-
-  a {
-    color: green;
-  }
-}
+@import "./valuable";
 
 .blogcardwrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 3em 0;
 }
 
 .blogcard {
+  display: flex;
+  flex-direction: column;
+
+  width: 600px;
+  box-shadow: $boxshadow-blogcard;
+  border-radius: 5px;
+  padding: 2em 3em;
+  gap: 3em 0;
+}
+
+.blogcard--header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  // blogcard title
+  h3 {
+    color: $color-dark1;
+    font-size: 2em;
+  }
+
+  // blogcard date
+  span {
+    color: $color-dark3;
+    font-size: 1.125em;
+  }
+}
+
+.blogcard--footer {
+  display: flex;
+  justify-content: space-between;
+
+  // blog description
+  span {
+    color: $color-dark2;
+    font-size: 1.125em;
+  }
+
+  // button section
+  .blogcard--buttonwrapper {
+    display: flex;
+    gap: 0 1rem;
+
+    .button__edit {
+      background-color: $color-emeraldgreen;
+    }
+
+    .button__delete {
+      background-color: $color-red;
+    }
+  }
 }
