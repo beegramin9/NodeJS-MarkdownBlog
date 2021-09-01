@@ -1,22 +1,31 @@
 @import "./valuable";
 
+.indexpage__title {
+  margin-top: 1em;
+  color: $color-dark1;
+  font-size: 3em;
+}
+
 .blogcardwrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  width: 100%;
   gap: 3em 0;
 }
 
 .blogcard {
   display: flex;
   flex-direction: column;
-
-  width: 600px;
   box-shadow: $boxshadow-blogcard;
   border-radius: 5px;
   padding: 2em 3em;
+  width: inherit;
   gap: 3em 0;
+  @media (max-width: $breakpoint-mobile) {
+    padding: 1em 1.5em;
+  }
 }
 
 .blogcard--header {
@@ -45,19 +54,5 @@
   span {
     color: $color-dark2;
     font-size: 1.125em;
-  }
-
-  // button section
-  .blogcard--buttonwrapper {
-    display: flex;
-    gap: 0 1rem;
-
-    .button__edit {
-      background-color: $color-emeraldgreen;
-    }
-
-    .button__delete {
-      background-color: $color-red;
-    }
   }
 }

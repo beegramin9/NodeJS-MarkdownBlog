@@ -1,10 +1,33 @@
-<div>
-    <h1> <%= article.title %> </h1>
-    <div> <%= article.date.toLocaleDateString() %> </div>
-    <a href="/">All atricles</a>
-    <a href="/articles/edit/<%= article.id %> ">Edit</a>
-
-    <div>
+<div class="postwrapper">
+    <h1 class="page__title"> <%= article.title %> </h1>
+    <div class="post__date"> <%= article.date.toLocaleDateString() %> </div>
+    <div class="post__body">
         <%- article.sanitizedHtml %> <!-- = 아니고 -을 사용해야 markdown을 HTML로 바꿀 수 있다. -->
     </div>   
+    <div class="post__buttonwrapper">
+        <button class="button__blue">
+            <a href="/articles/edit/<%= article.slug %> ">
+                Edit        
+            </a>
+        </button>
+        <form action="/articles/<%= article.id %>?_method=DELETE" method="POST">
+            <button class="button__red">
+                Delete
+            </button>
+        </form>
+        <button class="button__lime"> 
+            <a href="/">
+                All atricles
+            </a>
+        </button>
+    </div>
 </div>
+
+<!-- <section class="buttonwrapper">
+    <a href="/articles/edit/<%= article.slug %>">
+        <button class="button__blue">Edit</button>
+    </a>
+    <form action="/articles/<%= article.id %>?_method=DELETE" method="POST">
+        <button class="button__red" type="submit">Delete</button>
+    </form>
+</section> -->

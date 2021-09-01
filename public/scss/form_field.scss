@@ -6,12 +6,17 @@
   align-items: center;
   justify-content: flex-start;
   gap: 2em 0;
+  width: 100%;
+  margin: 0 2em;
+  padding: 2em 2em;
+  box-shadow: $boxshadow-post;
+  border-radius: 10px;
 
   div {
-    width: 600px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 100%;
     gap: 1em 0;
 
     label {
@@ -25,6 +30,7 @@
       font-size: 1.15em;
       font-weight: 500;
       color: $color-dark2;
+      border: 1px solid $color-dark3;
     }
   }
 
@@ -33,12 +39,5 @@
     flex-direction: row;
     justify-content: flex-end;
     gap: 0 2em;
-
-    button:first-child {
-      background-color: $color-red;
-    }
-    button:last-child {
-      background-color: $color-skyblue;
-    }
   }
 }

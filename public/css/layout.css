@@ -1,0 +1,33 @@
+.layoutwrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 780px) {
+  .layoutwrapper {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+@media (max-width: 420px) {
+  .layoutwrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 5px;
+  }
+}
+
+.layout {
+  grid-column: 2/3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 2em 0;
+}
+@media (max-width: 780px) {
+  .layout {
+    grid-column: 2/5;
+  }
+}
+
+/*# sourceMappingURL=layout.css.map */

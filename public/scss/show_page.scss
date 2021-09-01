@@ -1,0 +1,31 @@
+@import "./valuable";
+
+.postwrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em 0;
+  width: 100%;
+  padding: 2em 3em;
+  box-shadow: $boxshadow-post;
+  border-radius: 10px;
+}
+
+.post__date {
+  color: $color-dark3;
+  font-size: 1.5em;
+}
+
+.post__body {
+  color: $color-dark2;
+  padding: 0 10px;
+  font-size: 1.25em;
+}
+
+.post__buttonwrapper {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 0 3em;
+  gap: 0 1rem;
+}

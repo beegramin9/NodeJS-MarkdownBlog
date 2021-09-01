@@ -4,12 +4,17 @@
   align-items: center;
   justify-content: flex-start;
   gap: 2em 0;
+  width: 100%;
+  margin: 0 2em;
+  padding: 2em 2em;
+  box-shadow: 0px 8px 14px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
 }
 .form div {
-  width: 600px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 100%;
   gap: 1em 0;
 }
 .form div label {
@@ -20,18 +25,13 @@
   font-size: 1.15em;
   font-weight: 500;
   color: #414244;
+  border: 1px solid #a1a2a5;
 }
 .form div:last-child {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   gap: 0 2em;
-}
-.form div:last-child button:first-child {
-  background-color: #fc9e94;
-}
-.form div:last-child button:last-child {
-  background-color: #9cc9e3;
 }
 
 /*# sourceMappingURL=form_field.css.map */

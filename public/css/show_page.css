@@ -1,0 +1,31 @@
+.postwrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em 0;
+  width: 100%;
+  padding: 2em 3em;
+  box-shadow: 0px 8px 14px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.post__date {
+  color: #a1a2a5;
+  font-size: 1.5em;
+}
+
+.post__body {
+  color: #414244;
+  padding: 0 10px;
+  font-size: 1.25em;
+}
+
+.post__buttonwrapper {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 0 3em;
+  gap: 0 1rem;
+}
+
+/*# sourceMappingURL=show_page.css.map */

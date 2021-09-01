@@ -31,14 +31,14 @@ router.delete('/:id', async (req, res) => {
 })
 
 
-router.get('/edit/:id', async (req, res) => {
-    const existingArticle = await Article.findById(req.params.id);
+router.get('/edit/:slug', async (req, res) => {
+    const existingArticle = await Article.findOne( {slug: req.params.slug} );
     res.render('articles/edit', { article: existingArticle})
 })
 
 // PUT request
-router.put('/:id', async (req, res, next) => {
-    req.article = await Article.findById(req.params.id)
+router.put('/:slug', async (req, res, next) => {
+    req.article = await Article.findOne( {slug: req.params.slug} );
     next()
 }, saveArticleAndRedirectTo("edit"))
 

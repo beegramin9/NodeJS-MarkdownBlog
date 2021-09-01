@@ -1,31 +1,27 @@
-<div class="mainpagewrapper">
-    <h1>Blog Articles</h1>
-    <a href="/articles/new">New Article</a>
-    <div class="blogcardwrapper">
-    <% articles.forEach(article => { %> 
-        <div class="blogcard">
-                <div class="blogcard--header">
-                    <a href="articles/<%= article.slug %>">
-                        <h3><%= article.title %></h3>
-                    </a>
-                    <span><%=article.date.toLocaleDateString() %></span>
-                </div>
-                
-                
-                <div class="blogcard--footer">
-                    <span class="blogcard--description"><%= article.description %></span>
-                    
-                    <section class="blogcard--buttonwrapper">
-                        <a href="/articles/edit/<%= article.id %>">
-                            <button class="button__edit">Edit</button>
-                        </a>
-                        <form action="/articles/<%= article.id %>?_method=DELETE" method="POST">
-                            <button class="button__delete" type="submit">Delete</button>
-                        </form>
-                    </section>
-                </div>
-
+<h1 class="indexpage__title">Blog Articles</h1>
+<a href="/articles/new">
+    <button class="button__lime">New Article</button>
+</a>
+<div class="blogcardwrapper">
+<% articles.forEach(article => { %> 
+    <div class="blogcard">
+            <div class="blogcard--header">
+                <a href="articles/<%= article.slug %>">
+                    <h3><%= article.title %></h3>
+                </a>
+                <span><%=article.date.toLocaleDateString() %></span>
             </div>
-        <% }) %> 
-    </div>
+            
+            
+            <div class="blogcard--footer">
+                <span class="blogcard--description"><%= article.description %></span>
+                
+                <section class="buttonwrapper">
+                    <a href="/articles/<%= article.slug %>">
+                        <button class="button__yellow">View</button>
+                    </a>
+                </section> 
+            </div>
+        </div>
+    <% }) %> 
 </div>

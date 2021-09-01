@@ -1,22 +1,20 @@
-<div class="form">
-    <div>
-        <label for="title">Title</label>
-        <textarea name="title" id="title" rows=1><%= article.title %></textarea>
-    </div>
-    <div>
-        <label for="description">Description</label>
-        <textarea name="description" id="description" rows=3><%= article.description %></textarea>
-    </div>
-    <div>
-        <label for="markdown">Markdown</label>
-        <textarea required name="markdown" id="markdown" rows=10><%= article.markdown %></textarea>
-    </div>
-    <div>
-        <button>
-            <a href="/">
-                Cancel
-            </a>
-        </button>
-        <button type="submit">Save</button>
-    </div>
+<div>
+    <label for="title">Title</label>
+    <textarea name="title" id="title" rows=1><%= article.title %></textarea>
+</div>
+<div>
+    <label for="description">Description</label>
+    <textarea name="description" id="description" rows=3><%= article.description %></textarea>
+</div>
+<div>
+    <label for="markdown">Markdown</label>
+    <textarea required name="markdown" id="markdown" rows=10><%= article.markdown %></textarea>
+</div>
+<div>
+    <button class="button__red">
+        <a href="/">
+            Cancel
+        </a>
+    </button>
+    <button class="button__blue" type="submit">Save</button>
 </div>

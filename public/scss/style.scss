@@ -1,7 +1,10 @@
 @import "reset.css";
+@import "./layout.scss";
 @import "./index_page.scss";
+@import "./show_page.scss";
 @import "./form_field.scss";
 @import "./valuable";
+
 body {
   padding: 0;
   margin: 0;
@@ -21,15 +24,38 @@ a:visited {
 button {
   all: unset;
   cursor: pointer;
-  padding: 5px 10px;
-  width: 4em;
+  padding: 5px 5px;
   height: 1rem;
   text-align: center;
   border-radius: 5px;
   box-shadow: $boxshadow-button;
+  white-space: nowrap; // 한 줄로 입력하기
+
   border: 2px solid rgba(0, 0, 0, 0.2);
   color: $color-dark2;
   text-transform: uppercase;
   font-weight: 800;
   font-size: 1em;
+  @media (max-width: $breakpoint-mobile) {
+    padding: 2.5px 5px;
+    font-size: 1em;
+  }
+}
+
+.button__red {
+  background-color: $color-red;
+}
+.button__lime {
+  background-color: $color-lime;
+}
+.button__yellow {
+  background-color: $color-yellow;
+}
+.button__blue {
+  background-color: $color-skyblue;
+}
+.page__title {
+  margin-top: 1em;
+  color: $color-dark1;
+  font-size: 3em;
 }
