@@ -6,13 +6,9 @@
 <% articles.forEach(article => { %> 
     <div class="blogcard">
             <div class="blogcard--header">
-                <a href="articles/<%= article.slug %>">
-                    <h3><%= article.title %></h3>
-                </a>
+                <h3><%= article.title %></h3>
                 <span><%=article.date.toLocaleDateString() %></span>
             </div>
-            
-            
             <div class="blogcard--footer">
                 <span class="blogcard--description"><%= article.description %></span>
                 

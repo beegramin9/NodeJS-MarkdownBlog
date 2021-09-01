@@ -4,7 +4,8 @@ npm install
 
 ## 실행
 
-npm run devstart
+npm run devstart <br/>
+5000번 port에서 실행됩니다. (localhost:5000/)
 
 ## Project Status
 

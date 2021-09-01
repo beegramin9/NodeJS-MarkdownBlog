@@ -40,6 +40,7 @@ articleSchema.pre('validate', function (next) { // it validates with the followi
             strict: true // alnum이 아닌 특수문자는 알아서 삭제함
         })
     }
+    // 한글이 들어오면 안된다.
 
     if (this.markdown) {
         this.sanitizedHtml = dompurify.sanitize( marked(this.markdown) )

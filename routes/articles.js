@@ -17,7 +17,7 @@ router.get('/:slug', async (req,res) => {
 })
 
 router.post('/', async (req, res, next) => {
-    req.article = new Article();
+    req.article = new Article(); 
     next()
 }, saveArticleAndRedirectTo("new"))
 
@@ -50,9 +50,8 @@ function saveArticleAndRedirectTo(path) {
         currentlyWritingArticle.title = req.body.title
         currentlyWritingArticle.description = req.body.description
         currentlyWritingArticle.markdown = req.body.markdown
-
+        const newlySavedArticle = await currentlyWritingArticle.save();
         try {
-            const newlySavedArticle = await currentlyWritingArticle.save();
             res.redirect(`/articles/${newlySavedArticle.slug}`)
         } catch (e) {
             // required field가 빠져서 에러가 발생했을 때, 
